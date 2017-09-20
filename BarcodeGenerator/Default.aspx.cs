@@ -36,20 +36,35 @@ namespace BarcodeGenerator
 
         private void SendToPrinter()
         {
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.Verb = "print";
-            info.FileName = @"D:\test.pdf";
-            info.CreateNoWindow = true;
-            info.WindowStyle = ProcessWindowStyle.Hidden;
+            ProcessStartInfo info = new ProcessStartInfo(@"D:\test.pdf");
+            //if (autoPrint)
+            //{
+                info.Verb = "Print";
+                info.WindowStyle = ProcessWindowStyle.Hidden; // not normally required
+                Process.Start(info);
+                info.Verb = string.Empty;
+            //}
 
-            Process p = new Process();
-            p.StartInfo = info;
-            p.Start();
+            //if (viewOnScreen)
+            //{
+            //    info.WindowStyle = ProcessWindowStyle.Normal;
+            //    Process.Start(info);
+            //}
 
-            p.WaitForInputIdle();
-            System.Threading.Thread.Sleep(3000);
-            if (false == p.CloseMainWindow())
-                p.Kill();
+            //ProcessStartInfo info = new ProcessStartInfo();
+            //info.Verb = "print";
+            //info.FileName = @"D:\test.pdf";
+            //info.CreateNoWindow = true;
+            //info.WindowStyle = ProcessWindowStyle.Hidden;
+
+            //Process p = new Process();
+            //p.StartInfo = info;
+            //p.Start();
+
+            //p.WaitForInputIdle();
+            //System.Threading.Thread.Sleep(3000);
+            //if (false == p.CloseMainWindow())
+            //    p.Kill();
         }
     }
 }
