@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Spire.Pdf;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -36,21 +38,6 @@ namespace BarcodeGenerator
 
         private void SendToPrinter()
         {
-            ProcessStartInfo info = new ProcessStartInfo(@"D:\test.pdf");
-            //if (autoPrint)
-            //{
-                info.Verb = "Print";
-                info.WindowStyle = ProcessWindowStyle.Hidden; // not normally required
-                Process.Start(info);
-                info.Verb = string.Empty;
-            //}
-
-            //if (viewOnScreen)
-            //{
-            //    info.WindowStyle = ProcessWindowStyle.Normal;
-            //    Process.Start(info);
-            //}
-
             //ProcessStartInfo info = new ProcessStartInfo();
             //info.Verb = "print";
             //info.FileName = @"D:\test.pdf";
@@ -61,10 +48,19 @@ namespace BarcodeGenerator
             //p.StartInfo = info;
             //p.Start();
 
-            //p.WaitForInputIdle();
+            ////p.WaitForInputIdle();
             //System.Threading.Thread.Sleep(3000);
             //if (false == p.CloseMainWindow())
             //    p.Kill();
+
+            //BarcodeLib.Barcode b = new BarcodeLib.Barcode("kunal");
+            //System.Drawing.Image img = b.Encode(BarcodeLib.TYPE.UPCA, "038000356216", Color.Black, Color.White, 100, 25);
+            //img.Save(@"D:\test.pdf");
+
+            PdfDocument doc = new PdfDocument();
+            doc.LoadFromFile("D:\\Test.pdf");
+            doc.PrintDocument.Print();
+
         }
     }
 }
