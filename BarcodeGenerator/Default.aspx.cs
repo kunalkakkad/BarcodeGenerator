@@ -1,4 +1,6 @@
-﻿using Spire.Pdf;
+﻿using Spire.Barcode;
+using Spire.Pdf;
+using Spire.Pdf.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,20 +18,20 @@ namespace BarcodeGenerator
         protected void Page_Load(object sender, EventArgs e)
         {
             PrintBtn.Click += new EventHandler(this.PrintBtn_Click);
-            pdfViewer.Text = CreatePdfObjectTag("LabelGen.ashx?dpi=" + DropDownList1.SelectedItem.ToString() + "&prodId=" + TextBox2.Text + "&prodName=" + TextBox1.Text + "&out=PDF");
+            //pdfViewer.Text = CreatePdfObjectTag("LabelGen.ashx?dpi=" + DropDownList1.SelectedItem.ToString() + "&prodId=" + TextBox2.Text + "&prodName=" + TextBox1.Text + "&out=PDF");
         }
 
-        private string CreatePdfObjectTag(string pdfUrl)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("<object type=\"application/pdf\" ");
-            sb.Append("data=\"");
-            sb.Append(pdfUrl);
-            sb.Append("#toolbar=1&navpanes=0&scrollbar=1&page=1&zoom=100\" width=\"600px\" height=\"400px\" VIEWASTEXT><p>It appears you don't have a PDF plugin for your browser. <a target=\"_blank\" href=\"");
-            sb.Append(pdfUrl);
-            sb.Append("\">Click here to download the PDF file.</a></p></object>");
-            return sb.ToString();
-        }
+        //private string CreatePdfObjectTag(string pdfUrl)
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.Append("<object type=\"application/pdf\" ");
+        //    sb.Append("data=\"");
+        //    sb.Append(pdfUrl);
+        //    sb.Append("#toolbar=1&navpanes=0&scrollbar=1&page=1&zoom=100\" width=\"600px\" height=\"400px\" VIEWASTEXT><p>It appears you don't have a PDF plugin for your browser. <a target=\"_blank\" href=\"");
+        //    sb.Append(pdfUrl);
+        //    sb.Append("\">Click here to download the PDF file.</a></p></object>");
+        //    return sb.ToString();
+        //}
 
         protected void PrintBtn_Click(object sender, EventArgs e)
         {
@@ -53,12 +55,36 @@ namespace BarcodeGenerator
             //if (false == p.CloseMainWindow())
             //    p.Kill();
 
-            //BarcodeLib.Barcode b = new BarcodeLib.Barcode("kunal");
-            //System.Drawing.Image img = b.Encode(BarcodeLib.TYPE.UPCA, "038000356216", Color.Black, Color.White, 100, 25);
-            //img.Save(@"D:\test.pdf");
+            BarcodeSettings bs = new BarcodeSettings();
+            bs.Data = TextBox1.Text;
+            bs.ShowText = false;
+            BarCodeGenerator generator = new BarCodeGenerator(bs);
+            System.Drawing.Image barcode = generator.GenerateImage();
+
+            var basePath = AppDomain.CurrentDomain.BaseDirectory;
+            var guidNumber = Guid.NewGuid().ToString().Substring(0, 6);
+            var barcodeGeneratePath = basePath + "BarcodePdfs\\" + guidNumber;
+            //save the barcode as an image
+            barcode.Save(barcodeGeneratePath + ".png");
+
 
             PdfDocument doc = new PdfDocument();
-            doc.LoadFromFile("D:\\Test.pdf");
+            PdfSection section = doc.Sections.Add();
+            PdfPageBase page = doc.Pages.Add();
+
+            PdfImage image = PdfImage.FromFile(barcodeGeneratePath + ".png");
+            //Set image display location and size in PDF
+            float widthFitRate = image.PhysicalDimension.Width / page.Canvas.ClientSize.Width;
+            float heightFitRate = image.PhysicalDimension.Height / page.Canvas.ClientSize.Height;
+            float fitRate = Math.Max(widthFitRate, heightFitRate);
+            float fitWidth = image.PhysicalDimension.Width / fitRate;
+            float fitHeight = image.PhysicalDimension.Height / fitRate;
+            page.Canvas.DrawImage(image, 30, 30, fitWidth, fitHeight);
+
+            doc.SaveToFile(barcodeGeneratePath + ".pdf");
+            doc.Close();
+
+            doc.LoadFromFile(barcodeGeneratePath + ".pdf");
             doc.PrintDocument.Print();
 
         }

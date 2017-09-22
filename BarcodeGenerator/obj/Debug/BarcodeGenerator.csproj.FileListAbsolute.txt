@@ -33,3 +33,45 @@ C:\Users\Developer-Terminal\Documents\Visual Studio 2017\Projects\BarcodeGenerat
 C:\Users\Developer-Terminal\Documents\Visual Studio 2017\Projects\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.csprojResolveAssemblyReference.cache
 C:\Users\Developer-Terminal\Documents\Visual Studio 2017\Projects\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.dll
 C:\Users\Developer-Terminal\Documents\Visual Studio 2017\Projects\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.pdb
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\csc.exe
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\csc.exe.config
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\csc.rsp
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\csi.exe
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\csi.rsp
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\System.AppContext.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\System.Collections.Immutable.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\System.IO.FileSystem.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\System.Reflection.Metadata.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\vbc.exe
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\vbc.exe.config
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\vbc.rsp
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\VBCSCompiler.exe
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\roslyn\VBCSCompiler.exe.config
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\BarcodeGenerator.dll.config
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\BarcodeGenerator.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\BarcodeGenerator.pdb
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Neodynamic.SDK.ThermalLabel.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.csprojResolveAssemblyReference.cache
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.pdb
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Spire.Barcode.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Spire.License.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Spire.Pdf.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Microsoft.mshtml.dll
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Spire.Barcode.xml
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Spire.License.xml
+E:\GITBitBucketProjects\BarcodeGenerator\BarcodeGenerator\bin\Spire.Pdf.xml
