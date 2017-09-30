@@ -22,13 +22,31 @@ namespace BarcodeGenerator {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
         
         /// <summary>
-        /// TextBox1 control.
+        /// companyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox companyName;
+        
+        /// <summary>
+        /// productName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox productName;
+        
+        /// <summary>
+        /// productCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox productCode;
         
         /// <summary>
         /// PrintBtn control.

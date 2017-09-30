@@ -34,8 +34,12 @@
                     <fieldset>
                         <legend>Fill the form:</legend>
                         <br />
+                        Company Name:
+                        <asp:TextBox ID="companyName" runat="server" Text="Product Name"></asp:TextBox>
                         Product Name:
-                        <asp:TextBox ID="TextBox1" runat="server" Text="Sample Product"></asp:TextBox>
+                        <asp:TextBox ID="productName" runat="server" Text="Product Name"></asp:TextBox>
+                        Product Code:
+                        <asp:TextBox ID="productCode" runat="server" Text="Product Code"></asp:TextBox>
                         <%--<br />
                         Product Code:
                         <asp:TextBox ID="TextBox2" runat="server" Text="ABCD12345"></asp:TextBox>
