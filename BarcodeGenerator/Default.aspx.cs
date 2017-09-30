@@ -57,7 +57,11 @@ namespace BarcodeGenerator
 
             BarcodeSettings bs = new BarcodeSettings();
             bs.Data = TextBox1.Text;
-            bs.ShowText = false;
+            bs.Data2D = TextBox1.Text;
+            bs.ShowText = true;
+            //bs.BarHeight = 1;
+            //bs.X = 1;
+            //bs.Y = 1;
             BarCodeGenerator generator = new BarCodeGenerator(bs);
             System.Drawing.Image barcode = generator.GenerateImage();
 
@@ -74,12 +78,17 @@ namespace BarcodeGenerator
 
             PdfImage image = PdfImage.FromFile(barcodeGeneratePath + ".png");
             //Set image display location and size in PDF
-            float widthFitRate = image.PhysicalDimension.Width / page.Canvas.ClientSize.Width;
-            float heightFitRate = image.PhysicalDimension.Height / page.Canvas.ClientSize.Height;
-            float fitRate = Math.Max(widthFitRate, heightFitRate);
-            float fitWidth = image.PhysicalDimension.Width / fitRate;
-            float fitHeight = image.PhysicalDimension.Height / fitRate;
-            page.Canvas.DrawImage(image, 30, 30, fitWidth, fitHeight);
+
+            //float widthFitRate = image.PhysicalDimension.Width / page.Canvas.ClientSize.Width;
+            //float heightFitRate = image.PhysicalDimension.Height / page.Canvas.ClientSize.Height;
+            //float fitRate = Math.Max(widthFitRate, heightFitRate);
+            //float fitWidth = image.PhysicalDimension.Width / fitRate;
+            //float fitHeight = image.PhysicalDimension.Height / fitRate;
+
+            var barcodeImageWidth = 100;
+            var barcodeImageHeigth = 40;
+
+            page.Canvas.DrawImage(image, 30, 30, barcodeImageWidth, barcodeImageHeigth);
 
             doc.SaveToFile(barcodeGeneratePath + ".pdf");
             doc.Close();
